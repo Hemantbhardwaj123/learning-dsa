@@ -1,8 +1,8 @@
-package pepCoding;
+package basics;
 
 import java.util.Scanner;
 
-public class GcdLcm {
+public class gcdlcm {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
@@ -24,4 +24,3 @@ public class GcdLcm {
 
 }
 
-problem

@@ -7,7 +7,8 @@ public class ceilandfloor {
 
     int arr[]=new int[n];
     for(int i=0;i<n;i++){
-        arr[i]=sc.nextInt();                       problem
+        arr[i]=sc.nextInt();                    
+        //    problem
     }
     
     int lo=0;
@@ -15,7 +16,7 @@ public class ceilandfloor {
     int data=sc.nextInt();
     int cl=0;
     int fl=0;
-    while(cl<=fl){
+    while(lo<=hi){
         int m=(lo+hi)/2;
         if(data<arr[m]){
             hi=m-1;

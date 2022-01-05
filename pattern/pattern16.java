@@ -2,7 +2,7 @@ package pattern;
 
 import java.util.Scanner;
 
-public class Pattern16 {
+public class pattern16 {
 
 	public static void main(String[] args) {
 	Scanner sc= new Scanner(System.in);

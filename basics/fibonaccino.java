@@ -1,8 +1,8 @@
-package loops;
+package basics;
 
 import java.util.Scanner;
 
-public class fibonacciNo {
+public class fibonaccino {
 
 	public static void main(String[] args) {
       Scanner sc = new Scanner (System.in);

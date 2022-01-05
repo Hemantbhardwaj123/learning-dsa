@@ -1,4 +1,4 @@
-package pepCoding;
+package basics;
 
 import java.util.Scanner;
 

@@ -1,8 +1,8 @@
-package pepCoding;
+package basics;
 
 import java.util.Scanner;
 
-public class RotateNumber {
+public class rotateno {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -28,7 +28,7 @@ public class RotateNumber {
 			 System.out.println(r);
 			
 		
-	problem
+	// problem
 			
 					
 		

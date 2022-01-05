@@ -1,7 +1,8 @@
+package array;
 import java.io.*;
 import java.util.*;
 
-public class Main{
+public class reverseanarray{
   public static void display(int[] a){
     StringBuilder sb = new StringBuilder();
 
