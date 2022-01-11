@@ -1,7 +1,7 @@
 package twodarray;
 import java.util.*;
 public class introduction {
-    public static void main(String[] args) {
+    public static void main(String[] args, String string) {
         Scanner sc=new Scanner(System.in);
         int n =sc.nextInt();
         int m =sc.nextInt();
