@@ -11,7 +11,7 @@ public class lastindex {
             arr[i] = sc.nextInt();
         }
         int x = sc.nextInt();
-        int lis = lastIndex(arr, 00, x);
+        int lis = lastIndex(arr, 0, x);
         System.out.println(lis);
     }
 
