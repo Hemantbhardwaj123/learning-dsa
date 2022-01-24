@@ -5,21 +5,36 @@ public class getmazepath {
         Scanner sc =new Scanner(System.in);
         int n=sc.nextInt();
         int m=sc.nextInt();
-        printMazePath(1,1,n,m,"");
         
+         ArrayList <String> path=getMazePath(1,1,n,m);
+        System.out.println(path);
     }
-    public static void printMazePath(int sr,int sc,int dr,int dc,String psf){
-        if(sr>dr || sc>dc){
-            return ;
-        }
-        if(sr==dr && sc==dc){
-            System.out.println(psf);
-            return;
-        }
-        printMazePath(sr,sc+1,dr,dc,psf +"h");
-        printMazePath(sr+1,sc,dr,dc,psf+"v");
+    public static ArrayList<String> getMazePath(int sr,int sc,int dr,int dc){
+       if(sr==dr && sc==dc){
+           ArrayList<String> bres=new ArrayList<>();
+           bres.add("");
+           return bres;
+       }
+       ArrayList<String> hpath= new ArrayList<>();
+       ArrayList<String> vpath= new ArrayList<>();
+
+       if(sc<dc){
+          hpath= getMazePath(sr,sc+1,dr,dc);
+       }
+       if(sr<dr){
+          vpath= getMazePath(sr+1,sc,dr,dc);
+       }
+       ArrayList<String> paths=new ArrayList<>();
+       for(String hpaths:hpath){
+           paths.add("h"+hpaths);
+       }
+       for( String vpaths:vpath){
+           paths.add("v"+vpaths);
+       }
+       return paths;
     }
 }
+
 
 
 // import java.io.*;

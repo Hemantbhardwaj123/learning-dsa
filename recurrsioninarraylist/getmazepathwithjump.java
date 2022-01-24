@@ -5,23 +5,35 @@ public class getmazepathwithjump {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int m=sc.nextInt();
-        getMazeJump(1,1,n,m,"");
-
+        ArrayList<String> path= getMazeJump(1,1,n,m);
+        System.out.println(path);
     }
-    public static void getMazeJump(int sr,int sc,int dr,int dc,String psf){
+    public static ArrayList<String> getMazeJump(int sr,int sc,int dr,int dc){
         if(sr==dr && sc==dc){
-            System.out.println(psf);
-            return;
+            ArrayList<String> bres=new ArrayList <>();
+            bres.add("");
+            return bres;
         }
+        ArrayList<String> paths= new ArrayList<>();
         for(int ms=1;ms<=dc-sc;ms++){
-            getMazeJump(sr,sc+ms,dr,dc,"h" +psf);
+            ArrayList<String> hpaths=getMazeJump(sr,sc+ms,dr,dc);
+            for(String hpath:hpaths){
+                paths.add("h" +ms+hpath);
+            }
         }
         for(int ms=1;ms<=dr-sr;ms++){
-            getMazeJump(sr+ms,sc,dr,dc,"v" +psf);
+            ArrayList<String> vpaths=getMazeJump(sr+ms,sc,dr,dc);
+            for(String vpath:vpaths){
+                paths.add("v"+ms+vpath);
+            }
         }
-        for(int ms=1;ms<=dr-sr && ms<=dc-sc;ms++){
-            getMazeJump(sr+ms,sc+ms,dr,dc,"d" +psf);
+        for(int ms=1;ms<=dc-sc && ms<=dr-sr;ms++){
+            ArrayList<String> dpaths=getMazeJump(sr +ms,sc+ms,dr,dc);
+            for(String dpath:dpaths){
+                paths.add("d" +ms+dpath);
+            }
         }
+        return paths;
     }
 }
 
