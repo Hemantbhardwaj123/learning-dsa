@@ -1,3 +1,4 @@
+package baseques;
 import java.util.*;
 public class anybasemultiplication {
     public static void main(String[] args) {

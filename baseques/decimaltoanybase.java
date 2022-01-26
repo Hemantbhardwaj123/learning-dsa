@@ -1,4 +1,4 @@
-
+package baseques;
 import java.util.Scanner;
 
 public class decimaltoanybase {
